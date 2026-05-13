@@ -1,0 +1,62 @@
+<users>
+
+<user>
+    <id>1</id>
+    <name>Arun</name>
+    <city>Chennai</city>
+</user>
+
+<user>
+    <id>2</id>
+    <name>Bala</name>
+    <city>Madurai</city>
+</user>
+
+<user>
+    <id>3</id>
+    <name>Charan</name>
+    <city>Salem</city>
+</user>
+
+<user>
+    <id>4</id>
+    <name>Deepak</name>
+    <city>Trichy</city>
+</user>
+
+<user>
+    <id>5</id>
+    <name>Eswar</name>
+    <city>Erode</city>
+</user>
+
+<user>
+    <id>6</id>
+    <name>Farook</name>
+    <city>Vellore</city>
+</user>
+
+<user>
+    <id>7</id>
+    <name>Gokul</name>
+    <city>Karur</city>
+</user>
+
+<user>
+    <id>8</id>
+    <name>Hari</name>
+    <city>Tenkasi</city>
+</user>
+
+<user>
+    <id>9</id>
+    <name>Imran</name>
+    <city>Thanjavur</city>
+</user>
+
+<user>
+    <id>10</id>
+    <name>Jeeva</name>
+    <city>Chennai</city>
+</user>
+</users>
