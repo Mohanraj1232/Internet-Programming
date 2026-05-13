@@ -60,21 +60,20 @@ public class ClientServlet extends HttpServlet {
         URL url =
                 new URL("http://localhost:8080/opinion");
 
-        BufferedReader br =
-                new BufferedReader(
-                        new InputStreamReader(
-                                url.openStream()
-                        )
-                );
+        InputStream is = url.openStream();
 
-        String line;
+        String data = "";
 
-        while((line = br.readLine()) != null) {
+        int ch;
 
-            out.println(line + "<br>");
+        while ((ch = is.read()) != -1) {
+
+            data = data + (char) ch;
         }
 
-        br.close();
+        out.println(data);
+
+        is.close();
     }
 }
 ```
