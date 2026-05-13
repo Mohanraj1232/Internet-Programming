@@ -1,0 +1,17 @@
+CREATE DATABASE onlineexam;
+
+USE onlineexam;
+
+CREATE TABLE student(
+    regno VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(30),
+    mark1 INT,
+    mark2 INT,
+    mark3 INT
+);
+
+INSERT INTO student VALUES
+('101','Mohanraj','CSE',85,90,88),
+('102','Arun','IT',78,82,80),
+('103','Kavin','ECE',92,89,95);
