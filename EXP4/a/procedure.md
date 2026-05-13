@@ -1,161 +1,169 @@
-# How to Run Servlet Program in Eclipse with Tomcat
+Yes. You can run Servlets in **NetBeans** easily, and for Java Web projects many students find it simpler than Eclipse.
+
+---
+
+# How to Run Servlet Program in NetBeans
 
 ## Step 1: Install Required Software
 
-* Install Java JDK
-* Install Eclipse IDE for Enterprise Java
-* Install Apache Tomcat Server
+Install:
 
-Official sites:
+* Java JDK
+* NetBeans IDE
+* Apache Tomcat
 
-* [Java JDK](https://www.oracle.com/java/technologies/downloads/?utm_source=chatgpt.com)
-* [Eclipse IDE](https://www.eclipse.org/downloads/?utm_source=chatgpt.com)
+Downloads:
+
+* [NetBeans IDE](https://netbeans.apache.org/download/index.html?utm_source=chatgpt.com)
 * [Apache Tomcat](https://tomcat.apache.org/download-90.cgi?utm_source=chatgpt.com)
 
 ---
 
-# Step 2: Create Dynamic Web Project
+# Step 2: Configure Tomcat in NetBeans
 
-1. Open Eclipse
-2. Click:
+1. Open NetBeans
+2. Go to:
 
-```text id="e8cv8h"
-File → New → Dynamic Web Project
+```text id="7wbxsh"
+Tools → Servers
 ```
 
-3. Enter Project Name
-   Example:
+3. Click:
 
-```text id="m1vwyf"
+```text id="mp9m24"
+Add Server
+```
+
+4. Select:
+
+```text id="i7hljw"
+Apache Tomcat
+```
+
+5. Browse Tomcat installation folder
+6. Finish
+
+---
+
+# Step 3: Create Web Application
+
+1. Click:
+
+```text id="h32o1l"
+File → New Project
+```
+
+2. Select:
+
+```text id="ivb6sq"
+Java with Ant → Web Application
+```
+
+(or Jakarta EE/Web Application depending on version)
+
+3. Project Name:
+
+```text id="mlr87v"
 ServletDemo
 ```
 
-4. Click **Finish**
-
----
-
-# Step 3: Create HTML File
-
-Inside:
-
-```text id="6jlwm4"
-WebContent
-```
-
-or
-
-```text id="o1h5c2"
-src/main/webapp
-```
-
-Create:
-
-```text id="c1r0ww"
-index.html
-```
-
-Paste the HTML code.
-
----
-
-# Step 4: Create Servlet Class
-
-1. Right click `src`
-2. New → Class
-3. Name:
-
-```text id="glkm30"
-LoginServlet
-```
-
-Paste servlet code.
-
----
-
-# Step 5: Add Servlet Library (Important)
-
-If red errors appear for:
-
-```java id="rvv7rk"
-javax.servlet.*
-```
-
-Add Tomcat server runtime:
-
-### Steps:
-
-1. Right click project
-2. Properties
-3. Java Build Path
-4. Libraries
-5. Add Library
-6. Server Runtime
-7. Select Apache Tomcat
-8. Finish
-
----
-
-# Step 6: Configure `web.xml`
-
-Open:
-
-```text id="ag19yv"
-WEB-INF/web.xml
-```
-
-Paste:
-
-```xml id="z1k5gt"
-<web-app>
-
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>LoginServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
-
-</web-app>
-```
-
----
-
-# Step 7: Configure Tomcat Server
-
-1. Bottom panel → Servers
-2. Right click → New → Server
-3. Select Apache Tomcat
-4. Browse Tomcat folder
+4. Choose Tomcat Server
 5. Finish
 
 ---
 
-# Step 8: Run Project
+# Step 4: Create HTML File
 
-Right click project → Run As → Run on Server
+Inside:
 
-Choose Tomcat.
+```text id="0fux0z"
+Web Pages
+```
+
+Create:
+
+```text id="b5l9ef"
+index.html
+```
+
+Paste HTML code.
 
 ---
 
-# Step 9: Open Browser
+# Step 5: Create Servlet
 
-Run:
+1. Right click:
 
-```text id="rq8fca"
+```text id="zt8n2h"
+Source Packages
+```
+
+2. New → Servlet
+
+3. Servlet Name:
+
+```text id="9g12nv"
+LoginServlet
+```
+
+4. Finish
+
+NetBeans automatically creates servlet structure.
+
+Replace generated code with your servlet code.
+
+---
+
+# Step 6: Run Project
+
+Click:
+
+```text id="bjg8n8"
+Run Project
+```
+
+or press:
+
+```text id="wivfd8"
+F6
+```
+
+NetBeans starts Tomcat automatically.
+
+---
+
+# Step 7: Open Browser
+
+Usually NetBeans opens browser automatically.
+
+Otherwise open:
+
+```text id="ck5vkq"
 http://localhost:8080/ServletDemo/index.html
 ```
 
 ---
 
-# Expected Output
+# Important Note
 
-* Form page opens
-* Enter username and password
-* If password = `admin`
-  → Login Successful
-* Otherwise
-  → Invalid Password
+In newer NetBeans/Tomcat versions:
+
+* `javax.servlet.*` may become:
+
+```java id="i4jvwl"
+jakarta.servlet.*
+```
+
+If errors occur, use:
+
+```java id="2q4jj8"
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+```
+
+instead of:
+
+```java id="a4p6g7"
+import javax.servlet.*;
+import javax.servlet.http.*;
+```
