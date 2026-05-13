@@ -1,0 +1,13 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>LibraryServlet</servlet-name>
+        <servlet-class>LibraryServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LibraryServlet</servlet-name>
+        <url-pattern>/LibraryServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
