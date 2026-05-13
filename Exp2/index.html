@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Demonstration Page</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction : column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 10px 4px 15px 0px rgba(0,0,0,0.1);
+            padding: 30px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <h1>Alex Doe</h1>
+        
+        <p>Full-stack developer with a passion for <span style="color: #e74c3c; font-weight: bold;">clean code</span> and modern UI design.</p>
+
+        <a href="#" class="btn" style="box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">Connect with Me</a>
+        
+    </div>
+
+    <p style="margin-top: 30px; font-size: 0.8rem; font-style: italic;">
+        Built with both Embedded and Inline CSS.
+    </p>
+
+</body>
+</html>
