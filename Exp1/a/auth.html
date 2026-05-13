@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register | Chapter & Verse</title>
+</head>
+<body>
+
+    <header>
+        <h1>Chapter & Verse Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="auth.html">Login / Register</a></li>
+                <li><a href="profile.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>User Login</h2>
+            <form action="profile.html" method="GET">
+                <div>
+                    <label for="login-email">Email Address:</label><br>
+                    <input type="email" id="login-email" name="login-email" required>
+                </div>
+                <div>
+                    <label for="login-password">Password:</label><br>
+                    <input type="password" id="login-password" name="login-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Create a New Account</h2>
+            <form action="profile.html" method="GET">
+                <p>
+                    <label for="reg-name">Full Name:</label><br>
+                    <input type="text" id="reg-name" name="reg-name" required>
+                </p>
+                <p>
+                    <label for="reg-email">Email Address:</label><br>
+                    <input type="email" id="reg-email" name="reg-email" required>
+                </p>
+                <p>
+                    <label for="reg-password">Password:</label><br>
+                    <input type="password" id="reg-password" name="reg-password" required>
+                </p>
+                <p>
+                    <label for="reg-confirm">Confirm Password:</label><br>
+                    <input type="password" id="reg-confirm" name="reg-confirm" required>
+                </p>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chapter & Verse Bookstore. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
