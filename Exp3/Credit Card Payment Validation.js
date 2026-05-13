@@ -1,7 +1,7 @@
 function validatePayment() {
   let cardNumber = document.getElementById("cardNumber").value.replace(/\s/g, '');
   let cvv = document.getElementById("cvv").value;
-  let expiry = document.getElementById("expiry").value;
+  let expiry = document.getElementById("expiry").value.trim;
 
   // Card number (16 digits)
   let cardPattern = /^[0-9]{16}$/;
@@ -18,8 +18,7 @@ function validatePayment() {
   }
 
   // Expiry date (MM/YY)
-  let expiryPattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
-  if (!expiry.match(expiryPattern)) {
+  if (expiry.length != 5) {
     alert("Invalid expiry date");
     return false;
   }
